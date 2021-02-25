@@ -48,30 +48,34 @@ FBPre:	addi t2, t2, 65535  # t2 = periodo
 	# i = t1 / periodo = t2
 	
 No8:	la t3, T2CON	    # t3 = &T2CON
-	sh zero, t3	    # T2CON = 0
+	sh zero, 0(t3)	    # T2CON = 0
 	la t4, TMR4	    # t4 = &TMR2
-	sh zero, t4	    # TMR2 = 0
+	sh zero, 0(t4)	    # TMR2 = 0
 	la t5, PR2	    # tr5 = &PR2
-	sh zero, t5	    # PR2 = 0
+	sh zero, 0(t5)	    # PR2 = 0
 	
-	la t6, IFS0bits.T2IF# t6 = &IFS0bits.T2IF
-	sw zero, t6	    # TODO
+	la t6, IFS0	    # t6 = &IFS0
+	addi t0, zero, 512  # t0 = 1<<9
+	lw t7, 0(t6)	    # t7 = IFS0
+	or t0, t0, t7
+	sw t0, 0(t6)	    # 
 	
-	sll 
-	# TODO: Configurar TCKPS = t1
-	
-	# TODO: Encender temporizador
-	
+	# Configuramos TCKPS y encdendemos
+	addi t0, zero, 32768# t0 = 1<<15
+	sll t1, t1, 4	    # t1 = tckps << 4
+	or t0, t0, t1
+	sh t0, 0(t3)	    # T2CON = 1<<15 or tckps<<4
 	
 	# Esperar
-BTemp:	# TODO: Leer IFS0bits a t6
-	
-	beq t6, zero, BTemp
+	addi t0, zero, 0
+BTemp:	sh t0, 0(t6)	    # t0 = IFS0
+	srl t0, t0, 9	    # t0 = IFS0 >> 9
+	and t0, t0, 1	    # t0 = (IFS0>>9) & 1
+	beq t0, zero, BTemp
 	nop
 	
-	# TODO: Apagar temporizador
-    
-
+	# Apagar temporizador
+	sh zero, 0(t3)
 	
 	j Fin0
 	nop
