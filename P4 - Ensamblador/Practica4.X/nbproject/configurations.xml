@@ -18,6 +18,7 @@
       <itemPath>main3.c</itemPath>
       <itemPath>Pic32Ini.c</itemPath>
       <itemPath>Retardo.S</itemPath>
+      <itemPath>main4.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -36,9 +37,9 @@
         <targetDevice>PIC32MX230F064D</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>PK3OBPlatformTool</platformTool>
+        <platformTool>Simulator</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.50</languageToolchainVersion>
+        <languageToolchainVersion>2.41</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -63,7 +64,6 @@
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
-        <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep></makeCustomizationPostStep>
@@ -233,6 +233,8 @@
         <property key="programoptions.uselvpprogramming" value="false"/>
         <property key="voltagevalue" value="3.25"/>
       </PK3OBPlatformTool>
+      <item path="Retardo.S" ex="true" overriding="false">
+      </item>
       <Simulator>
         <property key="codecoverage.enabled" value="Disable"/>
         <property key="codecoverage.enableoutputtofile" value="false"/>
@@ -693,7 +695,9 @@
                   value=""/>
         <property key="warningmessagebreakoptions.warningmessages" value="holdstate"/>
       </Simulator>
-      <item path="main3.c" ex="true" overriding="false">
+      <item path="main2.c" ex="true" overriding="false">
+      </item>
+      <item path="main3.c" ex="false" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -708,6 +712,8 @@
         </C32CPP>
         <C32Global>
         </C32Global>
+      </item>
+      <item path="main4.c" ex="true" overriding="false">
       </item>
     </conf>
   </confs>

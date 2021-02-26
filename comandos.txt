@@ -1,0 +1,18 @@
+git pull origin main
+
+git add .
+
+git commit -m "pruebaa"   
+
+git push -u origin main	
+
+
+-------------------------
+
+git init
+
+git branch -m master main
+
+git remote add origin https://github.com/jorgecalvar/Lab-Micro.git
+
+git pull https://github.com/jorgecalvar/Lab-Micro.git
