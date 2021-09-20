@@ -207,6 +207,7 @@
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="firmware.download.all" value="false"/>
         <property key="memories.bootflash" value="true"/>
         <property key="memories.configurationmemory" value="true"/>
         <property key="memories.dataflash" value="true"/>
@@ -722,7 +723,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item path="main3_2.c" ex="true" overriding="false">
+      <item path="main3_2.c" ex="false" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -755,6 +756,22 @@
         </C32Global>
       </item>
       <item path="main5.c" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="main6.c" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>

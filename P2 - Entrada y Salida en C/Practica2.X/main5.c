@@ -12,6 +12,7 @@
 int main ( void )
 {
 	int pulsador_ant, pulsador_act;
+	int contador=0;
 	
 	TRISC = 0xFFF0; // 4 LEDs as output
 	LATC |= 0xF; // LEDs as OFF
@@ -38,8 +39,10 @@ int main ( void )
             if((LATC & 0xF) == 0x0){
                 LATC |= 0xF;
             }else{
-                LATC--;
+                contador++;
+                LATC =~ contador;
             }
+            
 		}
 
 		pulsador_ant = pulsador_act;

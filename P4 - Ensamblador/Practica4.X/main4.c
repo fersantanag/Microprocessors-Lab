@@ -25,7 +25,7 @@ int main(void) {
     TRISB = 0;
     TRISC = 0;
     while(1){
-        Retardo(500); //0.5s  para que la frecuencia de parpadeo = 1Hz
+        Retardo(1000); //0.5s  para que la frecuencia de parpadeo = 1Hz
         LATC ^= 1 << PIN_LED; // Se invierte el LED
     }
 }

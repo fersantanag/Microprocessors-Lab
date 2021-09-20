@@ -10,7 +10,7 @@
 int main(void) {
     
     TRISC = 0xFFF0; // 4 LEDs as output 11111111110000
-    LATC &= ~0xF; // LEDs on
+    LATC = ~0xF; // LEDs on
 
     while (1);
 

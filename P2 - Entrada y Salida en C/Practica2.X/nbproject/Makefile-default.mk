@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main6.c
+SOURCEFILES_QUOTED_IF_SPACED=main3_2.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main6.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main6.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main3_2.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main3_2.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main6.o
+OBJECTFILES=${OBJECTDIR}/main3_2.o
 
 # Source Files
-SOURCEFILES=main6.c
+SOURCEFILES=main3_2.c
 
 
 
@@ -107,18 +107,18 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/main6.o: main6.c  .generated_files/16791bc923f63513eb0fe903867613a3d5266668.flag .generated_files/9c38dd73fa47c8727ca672a3ac38932765b77050.flag
+${OBJECTDIR}/main3_2.o: main3_2.c  .generated_files/9003569ff544a68a8c6bd63a0cfbeabf78d8bf09.flag .generated_files/9c38dd73fa47c8727ca672a3ac38932765b77050.flag
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/main6.o.d 
-	@${RM} ${OBJECTDIR}/main6.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main6.o.d" -o ${OBJECTDIR}/main6.o main6.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	@${RM} ${OBJECTDIR}/main3_2.o.d 
+	@${RM} ${OBJECTDIR}/main3_2.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main3_2.o.d" -o ${OBJECTDIR}/main3_2.o main3_2.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 else
-${OBJECTDIR}/main6.o: main6.c  .generated_files/9ae1eec74d0646604a38a348a7b8e0d824a727c7.flag .generated_files/9c38dd73fa47c8727ca672a3ac38932765b77050.flag
+${OBJECTDIR}/main3_2.o: main3_2.c  .generated_files/c56d20c81aa1a46f770adeb3845b494879a627a1.flag .generated_files/9c38dd73fa47c8727ca672a3ac38932765b77050.flag
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/main6.o.d 
-	@${RM} ${OBJECTDIR}/main6.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main6.o.d" -o ${OBJECTDIR}/main6.o main6.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	@${RM} ${OBJECTDIR}/main3_2.o.d 
+	@${RM} ${OBJECTDIR}/main3_2.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/main3_2.o.d" -o ${OBJECTDIR}/main3_2.o main3_2.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	
 endif
 
