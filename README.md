@@ -1,7 +1,7 @@
 # Microprocessors-Lab
 Microprocessors Lab Files and final project on a Quadcopter, with @jorgecalvar 
 
-On folder Projecto Final we find the files for the final project, which consists of the creation of a quadcopter drone controlled by the PIC32.
+On folder "Projecto Final" we find the files for the final project, which consists of the creation of a quadcopter drone controlled by the PIC32.
 drone controlled by the PIC32. The drone consists of the following sensors:
 - Bluetooth module: which will allow communication with the controller app on the mobile phone.
 cell phone.
